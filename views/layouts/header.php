@@ -80,14 +80,20 @@
                                 <div class="col-sm-4">
                                     <ul class="multi-column-dropdown">
                                         <h6>Категорія</h6>
-                                        <li><a href="products.html">Куртки</a></li>
-                                        <li><a href="products.html">Джинси і штани</a></li>
+
+                                        <?php foreach ($categories as $categoryItem): ?>
+                                            <?php if ($categoryItem['sex']==1): ?>
+                                        <li><a href="/category/<?php echo $categoryItem['id']; ?>"><?php  echo $categoryItem['name']; ?></a></li>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+
+                                       <!-- <li><a href="products.html">Джинси і штани</a></li>
                                         <li><a href="products.html">Реглани і футболкі</a></li>
                                         <li><a href="products.html">Спортивний одяг</a></li>
                                         <li><a href="products.html">Жакети і піджаки</a></li>
                                         <li><a href="products.html">Рубашки</a></li>
                                         <li><a href="products.html">Комбінезони</a></li>
-                                        <li><a href="products.html">Бодіки</a></li>
+                                        <li><a href="products.html">Бодіки</a></li>-->
                                     </ul>
                                 </div>
                             <!--    <div class="col-sm-4">
@@ -120,7 +126,14 @@
                                 <div class="col-sm-4">
                                     <ul class="multi-column-dropdown">
                                         <h6>Категорії</h6>
-                                        <li><a href="products.html">Куртки</a></li>
+
+                                        <?php foreach ($categories as $categoryItem): ?>
+                                            <?php if ($categoryItem['sex']==1 || $categoryItem['sex']=2): ?>
+                                                <li><a href="/category/<?php echo $categoryItem['id']; ?>"><?php  echo $categoryItem['name']; ?></a></li>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+
+                                        <!--<li><a href="products.html">Куртки</a></li>
                                         <li><a href="products.html">Джинси і штани</a></li>
                                         <li><a href="products.html">Реглани і футболкі</a></li>
                                         <li><a href="products.html">Спортивний одяг</a></li>
@@ -130,7 +143,7 @@
                                         <li><a href="products.html">Бодіки</a></li>
                                         <li><a href="products.html">Плаття</a></li>
                                         <li><a href="products.html">Сарафани</a></li>
-                                        <li><a href="products.html">Спідниці</a></li>
+                                        <li><a href="products.html">Спідниці</a></li>-->
                                     </ul>
                                 </div>
                              <!--   <div class="col-sm-4">
@@ -162,14 +175,19 @@
                                 <div class="col-sm-6">
                                     <ul class="multi-column-dropdown">
                                         <h6>Категорії</h6>
-                                        <li><a href="products.html">Бодіки</a></li>
+                                        <?php foreach ($categories as $categoryItem): ?>
+                                            <?php if ($categoryItem['sex']!=2 or $categoryItem['name']=="Плаття"): ?>
+                                                <li><a href="/category/<?php echo $categoryItem['id']; ?>"><?php  echo $categoryItem['name']; ?></a></li>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                       <!-- <li><a href="products.html">Бодіки</a></li>
                                         <li><a href="products.html">Комплекти</a></li>
                                         <li><a href="products.html">Комбінезони</a></li>
                                         <li><a href="products.html">Куртки</a></li>
                                         <li><a href="products.html">Джинси і штани</a></li>
                                         <li><a href="products.html">Реглани і футболки</a></li>
                                         <li><a href="products.html">Жакети і піджаки</a></li>
-                                        <li><a href="products.html">Плаття</a></li>
+                                        <li><a href="products.html">Плаття</a></li>-->
                                     </ul>
                                 </div>
                                 <div class="clearfix"></div>

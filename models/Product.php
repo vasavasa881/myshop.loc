@@ -22,7 +22,7 @@ class Product
 
         // Текст запроса к БД
         $sql = 'SELECT id, name, price, is_new FROM product '
-                . 'WHERE status = "1" ORDER BY id DESC '
+                . 'WHERE status = "1" ORDER BY id ASC '
                 . 'LIMIT :count';
 
         // Используется подготовленный запрос

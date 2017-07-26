@@ -16,7 +16,7 @@ class Category
         $db = Db::getConnection();
 
         // Запрос к БД
-        $result = $db->query('SELECT id, name FROM category WHERE status = "1" ORDER BY sort_order, name ASC');
+        $result = $db->query('SELECT id, name, sex FROM category WHERE status = "1" ORDER BY sort_order, name ASC');
 
         // Получение и возврат результатов
         $i = 0;
@@ -24,6 +24,7 @@ class Category
         while ($row = $result->fetch()) {
             $categoryList[$i]['id'] = $row['id'];
             $categoryList[$i]['name'] = $row['name'];
+            $categoryList[$i]['sex'] = $row['sex'];
             $i++;
         }
         return $categoryList;

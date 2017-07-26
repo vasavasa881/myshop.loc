@@ -506,13 +506,15 @@ h3.head.text-center {
 }
 .product {
 	position:relative;
-	margin-top: 50px;
+	margin-top: 10px;
 }
 .product:hover .mask{
 	display:block;
 }
 .products-grid img {
-	width:100%;
+	width:95%;
+    height:60%;
+
 }
 .products-grid  a {
 	display:block;

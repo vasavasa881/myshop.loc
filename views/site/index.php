@@ -85,80 +85,23 @@
                 <header>
                     <h3 class="head text-center">Нові надходження</h3>
                 </header>
+            <?php foreach ($latestProducts as $product): ?>
                 <div class="col-md-4 product simpleCart_shelfItem text-center">
-                    <a href="single.html"><img src="/template/images/p1.jpg" alt="" /></a>
+
+
+                    <img src="<?php echo Product::getImage($product['id']); ?>" alt="" />
                     <div class="mask">
-                        <a href="single.html">Швидкий перегляд</a>
+                        <a href="/product/<?php echo $product['id']; ?>">Швидкий перегляд</a>
                     </div>
-                    <a class="product_name" href="single.html">**назва товару</a>
-                    <p><a class="item_add" href="#"><i></i> <span class="item_price">** ціна</span></a></p>
-                </div>
-                <div class="col-md-4 product simpleCart_shelfItem text-center">
-                    <a href="single.html"><img src="/template/images/p2.jpg" alt="" /></a>
-                    <div class="mask">
-                        <a href="single.html">Quick View</a>
+                    <a class="product_name" href="/product/<?php echo $product['id']; ?>"><?php echo $product['name']; ?></a>
+                    <p><a class="item_add" href="#"><i></i> <span class="item_price"><?php echo $product['price']; ?></span></a></p>
                     </div>
-                    <a class="product_name" href="single.html">great explorer</a>
-                    <p><a class="item_add" href="#"><i></i> <span class="item_price">$599.8</span></a></p>
-                </div>
-                <div class="col-md-4 product simpleCart_shelfItem text-center">
-                    <a href="single.html"><img src="/template/images/p3.jpg" alt="" /></a>
-                    <div class="mask">
-                        <a href="single.html">Quick View</a>
-                    </div>
-                    <a class="product_name" href="single.html">similique sunt</a>
-                    <p><a class="item_add" href="#"><i></i> <span class="item_price">$359.6</span></a></p>
-                </div>
-                <div class="col-md-4 product simpleCart_shelfItem text-center">
-                    <a href="single.html"><img src="/template/images/p4.jpg" alt="" /></a>
-                    <div class="mask">
-                        <a href="single.html">Quick View</a>
-                    </div>
-                    <a class="product_name" href="single.html">shrinking </a>
-                    <p><a class="item_add" href="#"><i></i> <span class="item_price">$649.99</span></a></p>
-                </div>
-                <div class="col-md-4 product simpleCart_shelfItem text-center">
-                    <a href="single.html"><img src="/template/images/p5.jpg" alt="" /></a>
-                    <div class="mask">
-                        <a href="single.html">Quick View</a>
-                    </div>
-                    <a class="product_name" href="single.html">perfectly simple</a>
-                    <p><a class="item_add" href="#"><i></i> <span class="item_price">$750</span></a></p>
-                </div>
-                <div class="col-md-4 product simpleCart_shelfItem text-center">
-                    <a href="single.html"><img src="/template/images/p6.jpg" alt="" /></a>
-                    <div class="mask">
-                        <a href="single.html">Quick View</a>
-                    </div>
-                    <a class="product_name" href="single.html">equal blame</a>
-                    <p><a class="item_add" href="#"><i></i> <span class="item_price">$295.59</span></a></p>
-                </div>
-                <div class="col-md-4 product simpleCart_shelfItem text-center">
-                    <a href="single.html"><img src="/template/images/p7.jpg" alt="" /></a>
-                    <div class="mask">
-                        <a href="single.html">Quick View</a>
-                    </div>
-                    <a class="product_name" href="single.html">Neque porro</a>
-                    <p><a class="item_add" href="#"><i></i> <span class="item_price">$380</span></a></p>
-                </div>
-                <div class="col-md-4 product simpleCart_shelfItem text-center">
-                    <a href="single.html"><img src="/template/images/p8.jpg" alt="" /></a>
-                    <div class="mask">
-                        <a href="single.html">Quick View</a>
-                    </div>
-                    <a class="product_name" href="single.html">perfectly simple</a>
-                    <p><a class="item_add" href="#"><i></i> <span class="item_price">$540.6</span></a></p>
-                </div>
-                <div class="col-md-4 product simpleCart_shelfItem text-center">
-                    <a href="single.html"><img src="/template/images/p9.jpg" alt="" /></a>
-                    <div class="mask">
-                        <a href="single.html">Quick View</a>
-                    </div>
-                    <a class="product_name" href="single.html">praising pain</a>
-                    <p><a class="item_add" href="#"><i></i> <span class="item_price">$229.5</span></a></p>
-                </div>
-                <div class="clearfix"></div>
+            <?php endforeach; ?>
+
             </div>
+
+                <div class="clearfix"></div>
+
         </div>
 
     </div>
