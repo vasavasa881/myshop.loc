@@ -28,10 +28,10 @@
 
 
                     <?php if ($result): ?>
-                        <p>Заказ оформлен. Мы Вам перезвоним.</p>
+                        <p>Замовлення оформлено. Ми вам перетелефонуємо</p>
                     <?php else: ?>
 
-                        <p>Выбрано товаров: <?php echo $totalQuantity; ?>, на сумму: <?php echo $totalPrice; ?>, $</p><br/>
+                        <p>Ви вибрали - <?php echo $totalQuantity; ?>  товарів, на сумму: <?php echo $totalPrice; ?>, $</p><br/>
 
                         <?php if (!$result): ?>                        
 
@@ -44,18 +44,18 @@
                                     </ul>
                                 <?php endif; ?>
 
-                                <p>Для оформления заказа заполните форму. Наш менеджер свяжется с Вами.</p>
+                                <p>Для оформления замовлення заповніть форму. Наш менеджер звяжеться з Вами.</p>
 
                                 <div class="login-form">
                                     <form action="#" method="post">
 
-                                        <p>Ваша имя</p>
+                                        <p>Ваше ім`я</p>
                                         <input type="text" name="userName" placeholder="" value="<?php echo $userName; ?>"/>
 
-                                        <p>Номер телефона</p>
+                                        <p>Номер телефону</p>
                                         <input type="text" name="userPhone" placeholder="" value="<?php echo $userPhone; ?>"/>
 
-                                        <p>Комментарий к заказу</p>
+                                        <p>Комментар до замовлення</p>
                                         <input type="text" name="userComment" placeholder="Сообщение" value="<?php echo $userComment; ?>"/>
 
                                         <br/>

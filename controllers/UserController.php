@@ -56,7 +56,7 @@ class UserController
     /**
      * Action для страницы "Вход на сайт"
      */
-    public function actionLogin()
+    public function actionLogin() 
     {
         // Переменные для формы
         $email = false;

@@ -93,7 +93,7 @@ a.simpleCart_empty {
   float: left;
 }
 .banner {
-    /*background-image: url("../images/banner_img.jpg");*/
+	background:url("../images/banner_img.jpg") no-repeat 0px 0px;
 	background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
@@ -213,14 +213,14 @@ ul.multi-column-dropdown h6 {
 }
 .banner-bottom-left{
 	float:Left;
-	margin: 10px 0px 0px 30px;
+	margin: 110px 0px 0px 30px;
 }
 .banner-bottom-right{
 	float:right;
 	width: 50%;
 }
-.banner-bottom-left h3 {
-    font-size: 45px;
+.banner-bottom-left h2 {
+    font-size: 90px;
     font-weight: 600;
     line-height: 120px;
     color: #816263;
@@ -506,15 +506,13 @@ h3.head.text-center {
 }
 .product {
 	position:relative;
-	margin-top: 10px;
+	margin-top: 50px;
 }
 .product:hover .mask{
 	display:block;
 }
 .products-grid img {
-	width:95%;
-    height:60%;
-
+	width:100%;
 }
 .products-grid  a {
 	display:block;
@@ -885,7 +883,7 @@ ul.tags_links li a:hover{
 	width:78%;
 	float:right;
 	background:rgba(245, 243, 243, 0.27);
-	min-height:800px;
+	min-height:400px;
 	padding:2em;
 }
 ul.product-top-list{
@@ -2132,8 +2130,8 @@ p.right {
 	display:inline-block;
 }
 .social-icons  ul li a {
-	width:18px;
-	height:18px;
+	width:35px;
+	height:35px;
 	background:url('../images/s-icons.png') no-repeat 0px 0px;
 	display:inline-block;
 	margin: 0 5px;
@@ -2142,10 +2140,10 @@ p.right {
 	opacity:0.5;
 }
 .social-icons  ul li a.facebook1 {
-	background-position: 0px 0px;
+	background-position: 6px 0px;
 }
 .social-icons  ul li a.twitter1 {
-	background-position: -18px 0px;
+	background-position: -28px 0px;
 }
 .social-icons  ul li a.googleplus1 {
 	background-position: -36px 0px;
@@ -2186,7 +2184,7 @@ p.right {
 		margin: 0 0 0 120px;
 	}
 	.banner-bottom-left {
-		margin: 0px 0px 0px 30px;
+		margin: 100px 0px 0px 30px;
 	}
 	.navbar-nav {
 		margin-right: 30px;
@@ -2215,7 +2213,7 @@ p.right {
 		padding: 6px 0 12px 0;
 	}
 	.banner-bottom-left h2 {
-		font-size: 35px;
+		font-size: 70px;
 		line-height: 85px;
 		margin: 0 0 0 135px;
 	}
@@ -2259,7 +2257,8 @@ p.right {
 		font-size: 30px;
 	}
 	.product {
-		margin-top: 40px;
+		margin-top: 5px;
+        left: 30%;
 	}
 	.mask {
 		top: 39%;
@@ -2893,7 +2892,7 @@ p.right {
 		height: 3px;
 	}
 	.banner-bottom-left {
-		margin: 0px 0px 0px 30px;
+		margin: 55px 0px 0px 30px;
 	}
 	.follow-us, .shipping-grid, .online-order {
 		padding: 0 15px;

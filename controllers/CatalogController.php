@@ -34,6 +34,8 @@ class CatalogController
         // Список товаров в категории
         $categoryProducts = Product::getProductsListByCategory($categoryId, $page);
 
+        $sliderProducts = Product::getRecommendedProducts();
+
         // Общее количетсво товаров (необходимо для постраничной навигации)
         $total = Product::getTotalProductsInCategory($categoryId);
 

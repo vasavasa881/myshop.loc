@@ -2,24 +2,35 @@
 <html>
 <head>
     <title>Магазин дитячого одягу *****</title>
-    <link href="/template/css/bootstrap.css" rel='stylesheet' type='text/css' />
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="/template/js/jquery.min.js"></script>
+
+    <link href="/template/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="/template/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
     <!-- Custom Theme files -->
     <link href="/template/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <!-- Custom Theme files -->
+    <link href="/template/css/component.css" rel="stylesheet" type="text/css" media="all" />
+
+
+
+    <link href="/template/css/main.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/template/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+
+
+    <link rel="stylesheet" href="/template/css/flexslider.css" type="text/css" media="screen" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Дитячий одяг, детская одежда, купить одежду для детей" />
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!--webfont-->
     <!-- for bootstrap working -->
-    <script type="text/javascript" src="/template/js/bootstrap-3.1.1.min.js"></script>
+
     <!-- //for bootstrap working -->
-    <!-- cart -->
-    <script src="/template/js/simpleCart.min.js"> </script>
-    <!-- cart -->
-    <link rel="stylesheet" href="/template/css/flexslider.css" type="text/css" media="screen" />
+
+    <script type="text/javascript" src="/template/js/bootstrap-3.1.1.min.js"></script>
 </head>
 
 <body>
@@ -30,16 +41,22 @@
         <div class="container">
             <div class="header-top-left">
                 <ul>
-                    <li><a href="user/login"><span class="glyphicon glyphicon-user"> </span>Вхід</a></li>
-                    <li><a href="user/register"><span class="glyphicon glyphicon-lock"> </span>Реєстрація</a></li>
+
+                    <li><a href="/user/register"><span class="glyphicon glyphicon-lock"> </span>Реєстрація</a></li>
+                    <?php if (User::isGuest()): ?>
+                        <li><a href="/user/login/"><i class="fa fa-lock"></i> Вхід</a></li>
+                    <?php else: ?>
+                        <li><a href="/cabinet/"><i class="fa fa-user"></i> Аккаунт</a></li>
+                        <li><a href="/user/logout/"><i class="fa fa-unlock"></i> Вихід</a></li>
+                    <?php endif; ?>
                 </ul>
             </div>
             <div class="header-right">
                 <div class="cart box_1">
-                    <a href="checkout.html">
-                        <h3> <span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>)<img src="/template/images/bag.png" alt=""></h3>
+                    <a href="/cart">
+                        <h3>Корзина замовлень:   </h3>  <span id="cart-count" class="fa fa-shopping-cart">   <?php echo Cart::countItems(); ?> </span>
                     </a>
-                    <p><a href="javascript:;" class="simpleCart_empty">Корзина замовлень</a></p>
+
                     <div class="clearfix"> </div>
                 </div>
             </div>

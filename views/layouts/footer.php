@@ -78,10 +78,10 @@
             <p>Магазин дитячого одягу <a href="/">@</a></p>
         </div>
     </div>
-</div>
+
 </body>
 </html>
-<!--<script>
+<script>
     $(document).ready(function(){
         $(".add-to-cart").click(function () {
             var id = $(this).attr("data-id");
@@ -91,5 +91,5 @@
             return false;
         });
     });
-</script>-->
+</script>
 

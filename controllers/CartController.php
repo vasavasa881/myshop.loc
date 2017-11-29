@@ -56,6 +56,7 @@ class CartController
 
         // Получим идентификаторы и количество товаров в корзине
         $productsInCart = Cart::getProducts();
+        print_r($productsInCart);
 
         if ($productsInCart) {
             // Если в корзине есть товары, получаем полную информацию о товарах для списка
@@ -118,13 +119,15 @@ class CartController
             $userId = false;
         }
 
+        //Форма відправлена
+
         // Обработка формы
         if (isset($_POST['submit'])) {
             // Если форма отправлена
             // Получаем данные из формы
             $userName = $_POST['userName'];
             $userPhone = $_POST['userPhone'];
-            $userComment = $_POST['userComment'];
+            $userComment = $_POST['u serComment'];
 
             // Флаг ошибок
             $errors = false;
@@ -146,9 +149,9 @@ class CartController
                 if ($result) {
                     // Если заказ успешно сохранен
                     // Оповещаем администратора о новом заказе по почте                
-                    $adminEmail = 'php.start@mail.ru';
-                    $message = '<a href="http://digital-mafia.net/admin/orders">Список заказов</a>';
-                    $subject = 'Новый заказ!';
+                    $adminEmail = 'vasavasa881@gmail.com';
+                    $message = '<a href="http://myshop.loc/admin/orders">Список заказов</a>';
+                    $subject = 'Нове замовлення!';
                     mail($adminEmail, $subject, $message);
 
                     // Очищаем корзину

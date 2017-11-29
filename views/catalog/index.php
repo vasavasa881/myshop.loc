@@ -45,7 +45,8 @@
                                         </a>
                                     </div>
                                     <?php if ($product['is_new']): ?>
-                                        <img src="/template/images/home/new.png" class="new" alt="" />
+
+                                        <img src="/template/images/new.png" class="new" alt="cxvxcv" />
                                     <?php endif; ?>
                                 </div>
                             </div>

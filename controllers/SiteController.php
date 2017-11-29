@@ -15,7 +15,8 @@ class SiteController
         $categories = Category::getCategoriesList();
 
         // Список последних товаров
-        $latestProducts = Product::getLatestProducts(6);
+        $latestProducts = Product::getlatestProducts();
+
 
         // Список товаров для слайдера
         $sliderProducts = Product::getRecommendedProducts();

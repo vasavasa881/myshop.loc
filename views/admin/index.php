@@ -6,7 +6,7 @@
             
             <br/>
             
-            <h4>Добрый день, администратор!</h4>
+            <h4>Вітаємо, на адміністративній сторінці!</h4>
             
             <br/>
             
@@ -15,9 +15,9 @@
             <br/>
             
             <ul>
-                <li><a href="/admin/product">Управление товарами</a></li>
-                <li><a href="/admin/category">Управление категориями</a></li>
-                <li><a href="/admin/order">Управление заказами</a></li>
+                <li><a href="/admin/product">Керування товарами</a></li>
+                <li><a href="/admin/category">Керування категоріями</a></li>
+                <li><a href="/admin/order">Керування замовленнями</a></li>
             </ul>
             
         </div>
